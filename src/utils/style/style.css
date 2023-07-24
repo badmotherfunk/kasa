@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EAEAEA;
+  min-width: 320px;
+}
+
+.Banner {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.Banner__nav {
+  gap: 10px;
+  color: #FF6060;
+  font-family: "Montserrat";
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
