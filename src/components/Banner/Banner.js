@@ -1,13 +1,14 @@
 import React from 'react'
-import {Link} from "react-router-dom"
-import logo from '../../assets/LOGO.png'
+import picture from '../../assets/Image source 1.png'
 
 export default function Banner() {
   return (
-    <nav className='Banner'>
-      <img src={logo} alt="Kasa" />
-        <Link to="/" className="Banner__nav">Accueil</Link>
-        <Link to="/about" className="Banner__nav">À propos</Link>
-    </nav>
+    <section className='banner'>
+        <div className='banner__container'>
+            <div className='banner__overlay'></div>
+            <img src={picture} alt="Falaise" className='banner__img' />
+            <p className='banner__title'>Chez vous, partout et ailleurs</p>
+        </div>
+    </section>
   )
 }
