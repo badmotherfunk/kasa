@@ -1,4 +1,4 @@
-export const annoucement = [
+export const announcement = [
 	{
 		"id": "c67ab8a7",
 		"title": "Appartement cosy",

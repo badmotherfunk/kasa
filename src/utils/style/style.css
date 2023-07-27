@@ -15,7 +15,7 @@ body {
   height: auto;
   display: flex;
   justify-content: space-between;
-  padding: 30px 100px;
+  padding: 50px 100px;
 }
 .navbar__nav {
   display: flex;
@@ -37,7 +37,7 @@ body {
 .banner {
   display: flex;
   justify-content: center;
-  padding: 20px 100px;
+  padding: 0 100px 20px 100px;
 }
 .banner__container {
   position: relative;
@@ -141,4 +141,115 @@ body {
   color: #FFFFFF;
   font-family: "Montserrat";
   font-size: 24px;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat";
+  color: #FF6060;
+}
+.error__txt {
+  font-size: 300px;
+  font-weight: bold;
+  margin: 100px 0 60px 0;
+}
+.error__title {
+  font-weight: 600;
+  font-size: 36px;
+}
+.error__link {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #FF6060;
+  cursor: pointer;
+  border-bottom: 1px solid;
+  margin: 120px 0;
+}
+
+.collapse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 100px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.collapse__visible {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  height: 55px;
+  border-radius: 5px;
+  border: none;
+  background-color: #FF6060;
+  cursor: pointer;
+}
+.collapse__content {
+  display: flex;
+  justify-content: space-between;
+}
+.collapse__title {
+  line-height: 55px;
+  font-size: 32px;
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  margin-left: 20px;
+}
+
+.collapse__visible img {
+  text-align: center;
+  height: 30px;
+  width: 30px;
+  margin-right: 25px;
+  margin-top: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.collapse__visible img.active {
+  transform: rotate(-180deg);
+}
+
+.toggle {
+  width: 80%;
+  display: none;
+  background-color: #F6F6F6;
+  border-radius: 0 0 10px 10px;
+  opacity: 0;
+}
+.toggle__text {
+  font-size: 18px;
+  font-family: "Montserrat";
+  color: #FF6060;
+  padding: 20px;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-100%);
+  }
+}
+@keyframes slide-out {
+  from {
+    transform: translateY(0);
+    display: flex;
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+.animated {
+  opacity: 1;
+  animation: slide-in 0.5s ease-in-out forwards;
+  z-index: -1;
+  display: flex;
+}
+
+.reverse {
+  opacity: 1;
+  animation: slide-out 0.5s ease-in-out forwards;
+  z-index: -1;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,28 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $main-font;
+    color: $main-color;
+
+    &__txt {
+        font-size: 300px;
+        font-weight: bold;
+        margin: 100px 0 60px 0;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 36px;
+    }
+
+    &__link {
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none;
+        color: $main-color;
+        cursor: pointer;
+        border-bottom: 1px solid;
+        margin: 120px 0;
+    }
+}
