@@ -21,12 +21,12 @@ export default function Collapse({title, content, id}) {
         <button 
         onClick={toggleState}
         className='collapse__visible'>
-            <span className='collapse__title'>{title}</span>
+            <span className={pathname === '/about' ? 'collapse__title' : 'collapse-title'}>{title}</span>
             <img src={Chevron} alt="Icone chevron" className={toggle ? "active" : ""}/>
         </button>
 
         <div className={toggle ? "toggle animated" : "toggle"}>
-            <p className='toggle__text' aria-hidden={toggle ? true : false}>{content}</p>
+            <div className='toggle__text' aria-hidden={toggle ? true : false}>{content}</div>
         </div>
 
     </div>

@@ -5,7 +5,6 @@
 .card-announcement {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .carousel {
@@ -27,7 +26,7 @@
     width: 100%;
     font-family: $main-font;
     gap: 5px;
-    margin-top: 30px;
+    margin-top: 35px;
 
     &__title {
         color: $main-color;
@@ -47,7 +46,7 @@
     gap: 70px;
     overflow: hidden;
     width: 100%;
-    margin-top: 20px;
+
 }
 
 .announcement-collapse {
@@ -56,8 +55,27 @@
     width: 100%;
 }
 
+.collapse-title {
+    color: $secondary-color;
+    font-size: 20px;
+    font-family: $main-font;
+    margin-left: 10px;
+    line-height: 55px;
+}
+
 .list-item {
     list-style-type: none;
+}
+
+.annoucement-profile {
+    display: flex;
+    justify-content: flex-end;
+    // width: 80px;
+}
+
+.container-info {
+    display: flex;
+    flex-direction: row;
 }
 
 
