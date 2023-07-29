@@ -19,8 +19,13 @@
     font-size: 24px;
     font-weight: 600;
 
-    &:focus {
-        border-bottom: 2px solid $main-color;
-    }
+    // &:focus {
+    //     border-bottom: 2px solid $main-color;
+    // }
+
+}
+
+.nav-link.active {
+    border-bottom: 2px solid $main-color;
 }
 

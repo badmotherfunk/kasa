@@ -1,0 +1,21 @@
+.tags-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    &__content {
+        background-color: $main-color;
+        border-radius: 10px;
+        gap: 20px;
+        padding: 4px 30px;
+        color: $secondary-color;
+        font-family: $main-font;
+        font-size: 13px;
+    }
+}

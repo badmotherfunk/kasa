@@ -30,7 +30,8 @@ body {
   font-size: 24px;
   font-weight: 600;
 }
-.nav-link:focus {
+
+.active {
   border-bottom: 2px solid #FF6060;
 }
 
@@ -129,13 +130,12 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  margin-top: 30px;
+  margin-top: 40px;
   padding-top: 70px;
 }
 .footer__logo {
   display: flex;
   justify-content: center;
-  width: 30px;
 }
 .footer__txt {
   color: #FFFFFF;
@@ -175,7 +175,7 @@ body {
   align-items: center;
   padding: 0 100px;
   overflow: hidden;
-  margin-top: 20px;
+  margin: 20px 0 30px 0;
 }
 .collapse__visible {
   display: flex;
@@ -219,12 +219,22 @@ body {
   background-color: #F6F6F6;
   border-radius: 0 0 10px 10px;
   opacity: 0;
+  opacity: 1;
+  animation: slide-out 0.5s ease-in-out;
+  z-index: -1;
 }
 .toggle__text {
   font-size: 18px;
   font-family: "Montserrat";
   color: #FF6060;
   padding: 20px;
+}
+
+.animated {
+  opacity: 1;
+  animation: slide-in 0.5s ease-in-out forwards;
+  z-index: -1;
+  display: flex;
 }
 
 @keyframes slide-in {
@@ -240,16 +250,4 @@ body {
   to {
     transform: translateY(-100%);
   }
-}
-.animated {
-  opacity: 1;
-  animation: slide-in 0.5s ease-in-out forwards;
-  z-index: -1;
-  display: flex;
-}
-
-.reverse {
-  opacity: 1;
-  animation: slide-out 0.5s ease-in-out forwards;
-  z-index: -1;
 }/*# sourceMappingURL=style.css.map */

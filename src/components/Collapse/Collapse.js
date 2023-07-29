@@ -1,29 +1,32 @@
 import React from 'react'
 import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import Chevron from '../../assets/chevron-up-solid.svg'
 
-export default function Collapse(props) {
+export default function Collapse({title, content, id}) {
+    
+    const { pathname } = useLocation()
 
     const [toggle, setToggle] = useState(false)
 
+    //Change l'état en foncition du toggle
     const toggleState = () => {
         setToggle(!toggle)
     }
 
+
   return (
-    <div className='collapse'>
+    <div className={pathname === '/about' ? 'collapse' : 'announcement-collapse'}>
 
         <button 
         onClick={toggleState}
         className='collapse__visible'>
-            <span className='collapse__title'>{props.title}</span>
-            <img src={Chevron} alt="Icone chevron" className={toggle && "active"}/>
+            <span className='collapse__title'>{title}</span>
+            <img src={Chevron} alt="Icone chevron" className={toggle ? "active" : ""}/>
         </button>
 
-        <div
-        className={toggle ? "toggle animated" : "toggle reverse"}
-        >
-            <p className='toggle__text' aria-hidden={toggle ? true : false}>{props.content}</p>
+        <div className={toggle ? "toggle animated" : "toggle"}>
+            <p className='toggle__text' aria-hidden={toggle ? true : false}>{content}</p>
         </div>
 
     </div>

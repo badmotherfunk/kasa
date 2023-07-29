@@ -16,7 +16,6 @@ export default function About() {
       <Collapse title='Sécurité' 
       content='La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l’hotes qu’au locataire. Cela permet à nos équipe de vérifier que les standards sont bien respectés. Nous organisons églement des ateliers sur la sécurité domestique pour nos hotes'
       />
-
     </div>
   )
 }
