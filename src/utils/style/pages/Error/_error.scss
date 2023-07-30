@@ -4,16 +4,19 @@
     align-items: center;
     font-family: $main-font;
     color: $main-color;
+    padding: 0 50px;
 
     &__txt {
         font-size: 300px;
         font-weight: bold;
         margin: 100px 0 60px 0;
+        padding: 0 50px;
     }
 
     &__title {
         font-weight: 600;
         font-size: 36px;
+        text-align: center;
     }
 
     &__link {

@@ -5,7 +5,9 @@ import { useLocation } from 'react-router-dom'
 
 
 export default function Banner() {
+
   const { pathname } = useLocation();
+  
   return (
     <section className='banner'>
         <div className='banner__container'>

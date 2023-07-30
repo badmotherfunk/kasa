@@ -3,7 +3,8 @@ import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import Chevron from '../../assets/chevron-up-solid.svg'
 
-export default function Collapse({title, content, id}) {
+
+export default function Collapse({title, content}) {
     
     const { pathname } = useLocation()
 

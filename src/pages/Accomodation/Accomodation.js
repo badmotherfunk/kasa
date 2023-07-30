@@ -5,13 +5,15 @@ import Tags from '../../components/Tags/Tags';
 import Profile from '../../components/Profile/Profile';
 import Collapse from '../../components/Collapse/Collapse';
 
+
 export default function Accomodation() {
+  
   const { id } = useParams();
 
   //Trouve l'id correspondant à la carte dans le tableau de data
   const apartments = announcement.find((apartment => apartment.id === id))
 
-  // Filtre la liste des équipements dans une liste
+  // Parcour les éléments de la liste des équipements, et les insère dans une liste
   const listItems = apartments.equipments.map((equipment) =>
   <li key={equipment}>{equipment}</li>)
 
@@ -27,9 +29,7 @@ export default function Accomodation() {
               <p className="announcement__location">{apartments.location}</p>
               <Tags className='announcement__tags' title={apartments.tags}/>
           </div>
-          <div className="annoucement-profile">
             <Profile />
-          </div>
         </div>
     </div>
     <div className="collapse-container">

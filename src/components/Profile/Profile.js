@@ -1,10 +1,11 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import { announcement } from '../../datas/Announcement';
-import StarActive from '../../assets/star-active.png'
-import StarInactive from '../../assets/star-inactive.png'
+import RatingScale from '../RatingScale/RatingScale';
+
 
 export default function Profile() {
+  
     const { id } = useParams();
     
     //Trouve l'id correspondant à la carte dans le tableau de data
@@ -19,10 +20,7 @@ export default function Profile() {
             <p className="profile__title">{user}</p>
             <img src={picture} alt={user} className="profile__img" />
         </div>
-        <div className="rating-container">
-            <img src={StarActive} alt="Étoiles attribuées" className="rating" />
-            <img src={StarInactive} alt="Étoiles non attibuées" className="rating" />
-        </div>
+        <RatingScale ratingValue={profile.rating}/>
     </div>
   )
 }
