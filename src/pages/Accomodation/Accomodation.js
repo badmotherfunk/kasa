@@ -1,14 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { announcement } from '../../datas/Announcement'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import Tags from '../../components/Tags/Tags';
 import Profile from '../../components/Profile/Profile';
 import Collapse from '../../components/Collapse/Collapse';
+import Carousel from '../../components/Carousel/Carousel';
 
 
 export default function Accomodation() {
-  
+
   const { id } = useParams();
+
+  // const navigate = useNavigate();
+  // const location = useLocation()
+
+  // console.log(location)
+  // console.log(location.pathname)
+  // console.log(id)
+
+  // useEffect(() => {
+  //   if (location.pathname !== `/accomodation/${id}`) {
+  //     navigate('*');
+  //   }
+  // })
+
 
   //Trouve l'id correspondant à la carte dans le tableau de data
   const apartments = announcement.find((apartment => apartment.id === id))
@@ -20,9 +35,7 @@ export default function Accomodation() {
   return (
   <div className='container-announcement'>
     <div className='card-announcement'>
-        <div className="carousel" key={id}>
-          <img src={apartments.pictures[0]} alt={apartments.title} />
-        </div>
+      <Carousel />
         <div className="container-info">
           <div className="announcement">
               <h1 className='announcement__title'>{apartments.title}</h1>

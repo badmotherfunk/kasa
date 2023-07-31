@@ -263,19 +263,6 @@ body {
   flex-direction: column;
 }
 
-.carousel {
-  width: 100%;
-  height: 415px;
-}
-
-.carousel img {
-  width: 100%;
-  height: 415px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 30px;
-}
-
 .announcement {
   display: flex;
   flex-direction: column;
@@ -371,4 +358,55 @@ body {
   justify-content: flex-end;
   flex-wrap: nowrap;
   padding: 10px 0 30px 0;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+}
+
+.carousel {
+  width: 100%;
+  height: 415px;
+}
+
+.carousel img {
+  width: 100%;
+  height: 415px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px;
+  -o-object-position: 0 55%;
+     object-position: 0 55%;
+}
+
+.vector {
+  width: 100%;
+}
+.vector__forward {
+  position: absolute;
+  right: 20px;
+  top: 160px;
+  width: 46px;
+  height: 79px;
+  cursor: pointer;
+}
+.vector__backward {
+  position: absolute;
+  left: 20px;
+  top: 160px;
+  width: 46px;
+  height: 79px;
+  cursor: pointer;
+}
+
+.counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  top: 91%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat";
+  color: #FFFFFF;
+  font-size: 18px;
 }/*# sourceMappingURL=style.css.map */

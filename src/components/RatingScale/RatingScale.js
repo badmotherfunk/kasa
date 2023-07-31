@@ -9,7 +9,7 @@ export default function RatingScale(props) {
 
     const range = [1, 2, 3, 4, 5]
 
-    // On map dans le tableau range pour trouver la correspondance des éléments, et on les affiche
+    // On parcour le tableau range pour trouver la correspondance des éléments, et on les affiche
   return (
     <div className='rating' >
         {range.map((rangeElem) => 
