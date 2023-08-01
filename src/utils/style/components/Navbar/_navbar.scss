@@ -1,3 +1,5 @@
+@import '../Breakpoints/breakpoints';
+
 .navbar {
     width: 100%;
     height: auto;
@@ -5,10 +7,28 @@
     justify-content: space-between;
     padding: 50px 100px;
 
+    //Media queries
+    @include desktop {
+        padding: 25px 50px;
+    }
+
+    @include tablet {
+        padding: 20px 30px;
+    }
+
+    @include mobile {
+        padding: 20px;
+    }
+
     &__nav {
         display: flex;
         align-items: center;
         gap: 50px;
+
+        //Media queries
+        @include mobile {
+            gap: 20px;
+        }
     }
 }
 
@@ -19,13 +39,36 @@
     font-size: 24px;
     font-weight: 600;
 
-    // &:focus {
-    //     border-bottom: 2px solid $main-color;
-    // }
+    //Media queries
+    @include desktop {
+        font-size: 20px;
+    }
 
+    @include tablet {
+        font-size: 17px;
+    }
+
+    @include mobile {
+        font-size: 13px;
+    }
 }
 
 .nav-link.active {
     border-bottom: 2px solid $main-color;
 }
 
+.kasa-logo {
+
+    //Media queries
+    @include desktop {
+        width: 160px;
+    }
+
+    @include tablet {
+        width: 145px;
+    }
+
+    @include mobile {
+        width: 120px;
+    }
+}

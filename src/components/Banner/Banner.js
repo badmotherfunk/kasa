@@ -11,9 +11,9 @@ export default function Banner() {
   return (
     <section className='banner'>
         <div className='banner__container'>
-            <div className='banner__overlay'></div>
-            <img src={pathname === "/" ? picture : picture2} alt="Paysage" className='banner__img' />
-            <p className='banner__title'>{pathname === "/" ? "Chez vous, partout et ailleurs" : ""}</p>
+            <div className={pathname === '/' ? 'banner__overlay' : "banner__background"}></div>
+            <img src={pathname === '/' ? picture : picture2} alt="Paysage" className={pathname === '/' ? 'banner__img' : 'banner__picture'} />
+            <p className='banner__title'>{pathname === '/' ? 'Chez vous, partout et ailleurs' : ''}</p>
         </div>
     </section>
   )

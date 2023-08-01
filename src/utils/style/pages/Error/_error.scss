@@ -1,3 +1,5 @@
+@import '../../components/Breakpoints/breakpoints';
+
 .error {
     display: flex;
     flex-direction: column;
@@ -11,12 +13,38 @@
         font-weight: bold;
         margin: 100px 0 60px 0;
         padding: 0 50px;
+
+        //Media queries
+        @include desktop {
+            font-size: 200px;
+        }
+
+        @include tablet {
+            font-size: 150px;
+        }
+
+        @include mobile {
+            font-size: 100px;
+        }
     }
 
     &__title {
         font-weight: 600;
         font-size: 36px;
         text-align: center;
+
+        //Media queries
+        @include desktop {
+            font-size: 30px;
+        }
+
+        @include tablet {
+            font-size: 20px;
+        }
+
+        @include mobile {
+            font-size: 17px;
+        }
     }
 
     &__link {
@@ -27,5 +55,14 @@
         cursor: pointer;
         border-bottom: 1px solid;
         margin: 120px 0;
+
+        //Media queries
+        @include tablet {
+            font-size: 15px;
+        }
+
+        @include mobile {
+            font-size: 13px;
+        }
     }
 }

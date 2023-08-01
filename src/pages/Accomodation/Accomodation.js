@@ -11,23 +11,19 @@ export default function Accomodation() {
 
   const { id } = useParams();
 
-  // const navigate = useNavigate();
-  // const location = useLocation()
-
-  // console.log(location)
-  // console.log(location.pathname)
-  // console.log(id)
-
-  // useEffect(() => {
-  //   if (location.pathname !== `/accomodation/${id}`) {
-  //     navigate('*');
-  //   }
-  // })
-
-
+  const navigate = useNavigate();
+  const location = useLocation()
+  
+  useEffect(() => {
+    if (location.pathname !== `/accomodation/${id}`) {
+      navigate('*');
+    }
+  })
+  
+  
   //Trouve l'id correspondant à la carte dans le tableau de data
   const apartments = announcement.find((apartment => apartment.id === id))
-
+  
   // Parcour les éléments de la liste des équipements, et les insère dans une liste
   const listItems = apartments.equipments.map((equipment) =>
   <li key={equipment}>{equipment}</li>)

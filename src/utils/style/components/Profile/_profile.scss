@@ -1,7 +1,14 @@
+@import '../Breakpoints/breakpoints';
+
 .profile {
     display: flex;
     align-items: center;
     margin: 25px 0 10px 0;
+
+    //Media queries
+    @include mobile {
+        justify-content: flex-end;
+    }
 
 
     &__title {
@@ -11,6 +18,22 @@
         text-align: right;
         line-height: 28px;
 
+        //Media queries
+        @include desktop {
+            font-size: 18px;
+        }
+
+        @include tablet {
+            margin-left: 20px;
+        }
+
+        @include mobile {
+            font-size: 15px;
+            margin-left: 0;
+            line-height: 20px;
+            width: 70px;
+        }
+
     }
 
     &__img {
@@ -19,6 +42,29 @@
         height: 75px;
         margin-left: 10px;
         cursor: pointer;
+
+        //Media queries
+        @include desktop {
+            width: 70px;
+            height: 70px;
+        }
+
+        @include mobile {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+.profile-container {
+
+    //Media queries
+    @include mobile {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        height: 50px;
+        margin: 5px 0 10px 0;
     }
 }
 
@@ -27,5 +73,32 @@
     justify-content: flex-end;
     flex-wrap: nowrap;
     padding: 10px 0 30px 0;
+
+    //Media queries
+    @include tablet {
+        align-items: center;
+    }
+
+    @include mobile {
+        padding: 0;
+        margin-top: 15px;
+    }
 }
 
+.rating img {
+
+    //Media queries
+    @include desktop {
+        width: 33px;
+    }
+
+    @include tablet {
+        width: 30px;
+        height: 30px;
+    }
+
+    @include mobile {
+        width: 22px;
+        height: 22px
+    }
+}

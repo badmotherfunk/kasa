@@ -27,7 +27,7 @@ export default function Collapse({title, content}) {
         </button>
 
         <div className={toggle ? "toggle animated" : "toggle"}>
-            <div className='toggle__text' aria-hidden={toggle ? true : false}>{content}</div>
+            <div className={pathname === '/about' ? 'toggle__text' : 'description__text'} aria-hidden={toggle ? true : false}>{content}</div>
         </div>
 
     </div>

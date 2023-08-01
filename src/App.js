@@ -6,8 +6,8 @@ import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/About/About";
 import Footer from "./components/Footer/Footer";
 
+function App(id) {
 
-function App() {
   return (
     <div className="App">
       <header className="App-header">

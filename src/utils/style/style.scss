@@ -1,13 +1,18 @@
+//Variables & base
 @import './base/reset';
 @import './variables/variables';
-@import './pages/Home/home';
+
+//Pages
+@import './pages/Accomodation/accomodation';
+@import './pages/Error/error';
+
+//Components
 @import './components/Navbar/navbar';
 @import './components/Banner/banner';
 @import './components/card/card';
-@import './components/Footer/footer';
-@import './pages/Error/error';
 @import './components/Collapse/collapse';
-@import './pages/Accomodation/accomodation';
+@import './components/Carousel/carousel';
 @import './components/Tags/tags';
 @import './components/Profile/profile';
-@import './components/Carousel/carousel';
+@import './components/Footer/footer';
+@import './components/Breakpoints/breakpoints';

@@ -1,4 +1,3 @@
-import '../../utils/style/pages//Home/_home.scss'
 import React from 'react'
 import Banner from '../../components/Banner/Banner'
 import Card from '../../components/Card/Card'
