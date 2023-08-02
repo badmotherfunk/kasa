@@ -653,6 +653,12 @@ body {
     font-size: 17px;
   }
 }
+@media screen and (max-width: 480px) {
+  .toggle__text {
+    font-size: 13px;
+    padding: 13px;
+  }
+}
 
 .animated {
   opacity: 1;

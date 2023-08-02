@@ -124,6 +124,11 @@
         @include desktop {
             font-size: 17px;
         }
+
+        @include mobile {
+            font-size: 13px;
+            padding: 13px;
+        }
     }
 }
 

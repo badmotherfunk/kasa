@@ -21,9 +21,3 @@ $breakpoints: (
         @content;
     }
 }
-
-@mixin breakpoint($bp: 1200px) {
-    @media screen and (max-width: $bp) {
-        @content;
-    }
-}

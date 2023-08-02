@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
 import { announcement } from '../../datas/Announcement'
-import { useParams, useNavigate, useLocation } from 'react-router-dom'
+import {useParams, Navigate } from 'react-router-dom'
 import Tags from '../../components/Tags/Tags';
 import Profile from '../../components/Profile/Profile';
 import Collapse from '../../components/Collapse/Collapse';
@@ -11,18 +10,11 @@ export default function Accomodation() {
 
   const { id } = useParams();
 
-  const navigate = useNavigate();
-  const location = useLocation()
-  
-  useEffect(() => {
-    if (location.pathname !== `/accomodation/${id}`) {
-      navigate('*');
-    }
-  })
-  
-  
-  //Trouve l'id correspondant à la carte dans le tableau de data
+  //Trouve l'id correspondant à la carte dans le tableau de data/ Sinon renvoie vers la page d'erreur
   const apartments = announcement.find((apartment => apartment.id === id))
+    if (!apartments) {
+    return <Navigate to='*' />;
+    }
   
   // Parcour les éléments de la liste des équipements, et les insère dans une liste
   const listItems = apartments.equipments.map((equipment) =>
