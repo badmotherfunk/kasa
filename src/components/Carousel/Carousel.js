@@ -1,21 +1,17 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useState } from 'react'
-import { announcement } from '../../datas/Announcement'
 import VectorForward from '../../assets/Vector-forward.png'
 import VectorBackward from '../../assets/Vector-backward.png'
 
 
-export default function Carousel() {
+export default function Carousel({pictures}) {
 
     const { id } = useParams();
 
     const [currentIndex, setCurrentIndex] = useState(0); 
 
-    //Trouve l'id correspondant à la carte dans le tableau de data
-    const apartments = announcement.find((apartment => apartment.id === id))
-
-    const slides = apartments.pictures
+    const slides = pictures
 
     const lastIndexSlide = slides.length - 1
 

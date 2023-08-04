@@ -1,5 +1,5 @@
 import React from 'react'
-import { announcement } from '../../datas/Announcement'
+import { announcements } from '../../data/Announcements'
 import { Link } from 'react-router-dom'
 
 
@@ -9,7 +9,7 @@ export default function Card() {
 
       <div className='container'>
         <div className='card-container'>
-          {announcement.map(({id, title, cover}) => (
+          {announcements.map(({id, title, cover}) => (
             <div key={id} className='card'>
               <Link to={`/accomodation/${id}`}>
                 <div className="card__overlay"></div>

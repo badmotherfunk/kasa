@@ -22,7 +22,7 @@ export default function Collapse({title, content}) {
         <button 
         onClick={toggleState}
         className='collapse__visible'>
-            <span className={pathname === '/about' ? 'collapse__title' : 'collapse-title'}>{title}</span>
+            <span className={pathname === '/about' ? 'collapse__title' : 'collapse__heading'}>{title}</span>
             <img src={Chevron} alt="Icone chevron" className={toggle ? "active" : ""}/>
         </button>
 

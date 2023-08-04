@@ -3,9 +3,7 @@ import StarActive from '../../assets/star-active.png'
 import StarInactive from '../../assets/star-inactive.png'
 
 
-export default function RatingScale(props) {
-
-    const ratingValue = props.ratingValue
+export default function RatingScale({ratingValue}) {
 
     const range = [1, 2, 3, 4, 5]
 
