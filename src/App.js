@@ -14,7 +14,7 @@ function App(id) {
         <Navbar />
       </header>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/kasa" element={<Home />} />
         <Route path="/accomodation/:id" element={<Accomodation />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error />} />
