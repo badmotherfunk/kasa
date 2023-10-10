@@ -14,7 +14,7 @@ export default function Navbar() {
       <img src={logo} className='kasa-logo' alt="Kasa" />
       </Link>
       <div className='navbar__nav'  >
-        <Link to="/" className={pathname === "/" ? "nav-link active" : "nav-link"}>Accueil</Link>
+        <Link to="/kasa" className={pathname === "/kasa" ? "nav-link active" : "nav-link"}>Accueil</Link>
         <Link to="/about" className={pathname === "/about" ? "nav-link active" : "nav-link"}>À propos</Link>
       </div>
     </nav>
