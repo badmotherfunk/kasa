@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <nav className='navbar'>
-      <Link to="/">
+      <Link to="/kasa">
       <img src={logo} className='kasa-logo' alt="Kasa" />
       </Link>
       <div className='navbar__nav'  >
